@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+PDFJS_VERSION=${1}
+
+set -euo pipefail
+
+if [ -z "$PDFJS_VERSION" ]; then
+  echo "Usage: $0 <pdfjs-version>"
+  exit 1
+fi
+
+rm -rf tmp/pdfviewer
+git clone --depth 5 --branch $PDFJS_VERSION https://github.com/mozilla/pdf.js.git tmp/pdfviewer
+
+npm install --prefix tmp/pdfviewer
+npx gulp --cwd tmp/pdfviewer generic
+
+rm -rf public/web public/build
+mv tmp/pdfviewer/build/generic/build public/
+mv tmp/pdfviewer/build/generic/web public/
+rm -rf tmp
