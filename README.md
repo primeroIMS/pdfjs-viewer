@@ -117,7 +117,7 @@ The viewer loads with default PDF.js styling. To customize the appearance, you c
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/pdfjs_viewer.
+Bug reports and pull requests are welcome on GitHub at https://github.com/primeroIMS/pdfjs-viewer.
 
 ## License
 
