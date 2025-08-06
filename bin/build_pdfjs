@@ -12,6 +12,7 @@ fi
 rm -rf tmp/pdfviewer
 git clone --depth 5 --branch $PDFJS_VERSION https://github.com/mozilla/pdf.js.git tmp/pdfviewer
 
+
 npm install --prefix tmp/pdfviewer
 npx gulp --cwd tmp/pdfviewer generic
 

@@ -1543,7 +1543,7 @@ class BasePreferences {
   }
 }
 
-;// ./node_modules/@fluent/bundle/esm/types.js
+;// ./node_modules/.pnpm/@fluent+bundle@0.19.1/node_modules/@fluent/bundle/esm/types.js
 class FluentType {
   constructor(value) {
     this.value = value;
@@ -1639,7 +1639,7 @@ class FluentDateTime extends FluentType {
     return this.value.toString();
   }
 }
-;// ./node_modules/@fluent/bundle/esm/resolver.js
+;// ./node_modules/.pnpm/@fluent+bundle@0.19.1/node_modules/@fluent/bundle/esm/resolver.js
 
 const MAX_PLACEABLES = 100;
 const FSI = "\u2068";
@@ -1859,7 +1859,7 @@ function resolvePattern(scope, value) {
   }
   return resolveComplexPattern(scope, value);
 }
-;// ./node_modules/@fluent/bundle/esm/scope.js
+;// ./node_modules/.pnpm/@fluent+bundle@0.19.1/node_modules/@fluent/bundle/esm/scope.js
 class Scope {
   constructor(bundle, errors, args) {
     this.dirty = new WeakSet();
@@ -1888,7 +1888,7 @@ class Scope {
     return cache[id];
   }
 }
-;// ./node_modules/@fluent/bundle/esm/builtins.js
+;// ./node_modules/.pnpm/@fluent+bundle@0.19.1/node_modules/@fluent/bundle/esm/builtins.js
 
 function values(opts, allowed) {
   const unwrapped = Object.create(null);
@@ -1929,7 +1929,7 @@ function DATETIME(args, opts) {
   }
   throw new TypeError("Invalid argument to DATETIME");
 }
-;// ./node_modules/@fluent/bundle/esm/memoizer.js
+;// ./node_modules/.pnpm/@fluent+bundle@0.19.1/node_modules/@fluent/bundle/esm/memoizer.js
 const cache = new Map();
 function getMemoizerForLocale(locales) {
   const stringLocale = Array.isArray(locales) ? locales.join(" ") : locales;
@@ -1940,7 +1940,7 @@ function getMemoizerForLocale(locales) {
   }
   return memoizer;
 }
-;// ./node_modules/@fluent/bundle/esm/bundle.js
+;// ./node_modules/.pnpm/@fluent+bundle@0.19.1/node_modules/@fluent/bundle/esm/bundle.js
 
 
 
@@ -2009,7 +2009,7 @@ class FluentBundle {
     }
   }
 }
-;// ./node_modules/@fluent/bundle/esm/resource.js
+;// ./node_modules/.pnpm/@fluent+bundle@0.19.1/node_modules/@fluent/bundle/esm/resource.js
 const RE_MESSAGE_START = /^(-?[a-zA-Z][\w-]*) *= */gm;
 const RE_ATTRIBUTE_START = /\.([a-zA-Z][\w-]*) *= */y;
 const RE_VARIANT_START = /\*?\[/y;
@@ -2388,11 +2388,11 @@ class Indent {
     this.length = length;
   }
 }
-;// ./node_modules/@fluent/bundle/esm/index.js
+;// ./node_modules/.pnpm/@fluent+bundle@0.19.1/node_modules/@fluent/bundle/esm/index.js
 
 
 
-;// ./node_modules/@fluent/dom/esm/overlay.js
+;// ./node_modules/.pnpm/@fluent+dom@0.10.2/node_modules/@fluent/dom/esm/overlay.js
 const reOverlay = /<|&#?\w+;/;
 const TEXT_LEVEL_ELEMENTS = {
   "http://www.w3.org/1999/xhtml": ["em", "strong", "small", "s", "cite", "q", "dfn", "abbr", "data", "time", "code", "var", "samp", "kbd", "sub", "sup", "i", "b", "u", "mark", "bdi", "bdo", "span", "br", "wbr"]
@@ -2543,7 +2543,7 @@ function shallowPopulateUsing(fromElement, toElement) {
   overlayAttributes(fromElement, toElement);
   return toElement;
 }
-;// ./node_modules/cached-iterable/src/cached_iterable.mjs
+;// ./node_modules/.pnpm/cached-iterable@0.3.0/node_modules/cached-iterable/src/cached_iterable.mjs
 class CachedIterable extends Array {
   static from(iterable) {
     if (iterable instanceof this) {
@@ -2552,7 +2552,7 @@ class CachedIterable extends Array {
     return new this(iterable);
   }
 }
-;// ./node_modules/cached-iterable/src/cached_sync_iterable.mjs
+;// ./node_modules/.pnpm/cached-iterable@0.3.0/node_modules/cached-iterable/src/cached_sync_iterable.mjs
 
 class CachedSyncIterable extends CachedIterable {
   constructor(iterable) {
@@ -2587,7 +2587,7 @@ class CachedSyncIterable extends CachedIterable {
     return this[this.length - 1];
   }
 }
-;// ./node_modules/cached-iterable/src/cached_async_iterable.mjs
+;// ./node_modules/.pnpm/cached-iterable@0.3.0/node_modules/cached-iterable/src/cached_async_iterable.mjs
 
 class CachedAsyncIterable extends CachedIterable {
   constructor(iterable) {
@@ -2624,10 +2624,10 @@ class CachedAsyncIterable extends CachedIterable {
     return this[this.length - 1];
   }
 }
-;// ./node_modules/cached-iterable/src/index.mjs
+;// ./node_modules/.pnpm/cached-iterable@0.3.0/node_modules/cached-iterable/src/index.mjs
 
 
-;// ./node_modules/@fluent/dom/esm/localization.js
+;// ./node_modules/.pnpm/@fluent+dom@0.10.2/node_modules/@fluent/dom/esm/localization.js
 
 class Localization {
   constructor(resourceIds = [], generateBundles) {
@@ -2742,7 +2742,7 @@ function keysFromBundle(method, bundle, keys, translations) {
   });
   return missingIds;
 }
-;// ./node_modules/@fluent/dom/esm/dom_localization.js
+;// ./node_modules/.pnpm/@fluent+dom@0.10.2/node_modules/@fluent/dom/esm/dom_localization.js
 
 
 const L10NID_ATTR_NAME = "data-l10n-id";
@@ -2905,7 +2905,7 @@ class DOMLocalization extends Localization {
     };
   }
 }
-;// ./node_modules/@fluent/dom/esm/index.js
+;// ./node_modules/.pnpm/@fluent+dom@0.10.2/node_modules/@fluent/dom/esm/index.js
 
 
 ;// ./web/l10n.js

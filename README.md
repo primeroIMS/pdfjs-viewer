@@ -99,6 +99,12 @@ The viewer loads with default PDF.js styling. To customize the appearance, you c
 
 ## Updating pdfjs from Mozilla
 
+### Requirements
+
+ - [node/npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+
+### Instructions
+
 1. Run update script
 
     ```
