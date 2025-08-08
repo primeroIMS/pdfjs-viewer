@@ -1,5 +1,8 @@
-# PdfjsViewer Configuration
+# frozen_string_literal: true
 
+# Copyright (c) 2014 - 2025 Salus. All rights reserved.
+
+# PdfjsViewer Configuration
 PdfjsViewer.configure do |config|
   # Show/hide the highlight button in the toolbar
   # config.show_highlight_button = true
@@ -21,4 +24,7 @@ PdfjsViewer.configure do |config|
 
   # Show/hide the open file button in the toolbar
   # config.show_open_file_button = true
+
+  # Url path to viewer override CSS file (asset pipeline, cdn, public directory, etc.)
+  # config.stylesheet_path = '/pdf-viewer.css'
 end

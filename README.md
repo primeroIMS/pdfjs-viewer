@@ -51,6 +51,7 @@ PdfjsViewer.configure do |config|
   config.show_print_button = true          # Show/hide print button
   config.show_save_button = true           # Show/hide save/download button
   config.show_open_file_button = true      # Show/hide open file button
+  config.stylesheet_path =  '/pdf.css'     # Url path to override css file    
 end
 ```
 
@@ -84,13 +85,16 @@ or you can use the object tag
 </object>
 ```
 
+A helper `pdfjs_viewer_path` is defined to return the path of the viewer
+
 ### 5. Styling and Customization
 
 The viewer loads with default PDF.js styling. To customize the appearance, you can:
 
-1. Override CSS in your application's stylesheets
-2. Modify the viewer template if needed
-3. Use the configuration options to show/hide specific toolbar elements
+- Set `config.stylesheet_path` to a url path to a stylesheet in the initializer. 
+The viewer uses css variables that you can override in this css file.
+- Modify the viewer template if needed
+- Use the configuration options to show/hide specific toolbar elements
 
 ## Requirements
 

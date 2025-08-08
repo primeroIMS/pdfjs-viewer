@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Copyright (c) 2014 - 2025 Salus. All rights reserved.
+
 PDFJS_VERSION=${1}
 
 set -euo pipefail

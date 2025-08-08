@@ -34,6 +34,9 @@ See https://github.com/adobe-type-tools/cmap-resources
 <script src="../build/pdf.mjs" type="module"></script>
 
     <link rel="stylesheet" href="/web/viewer.css">
+    <% if stylesheet_path.present? %>
+      <link rel="stylesheet" href="<%= stylesheet_path %>">
+    <% end %>
 
   <script src="/web/viewer.mjs" type="module"></script>
   </head>
@@ -199,7 +202,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                     </div>
                   </div>
                   <div id="editorHighlight" class="toolbarButtonWithContainer">
-                    <button id="editorHighlightButton" style="<%= toggle_action(:highlight_button) %>" class="toolbarButton" type="button" disabled="disabled" role="radio" aria-expanded="false" aria-haspopup="true" aria-controls="editorHighlightParamsToolbar" tabindex="0" data-l10n-id="pdfjs-editor-highlight-button">
+                    <button id="editorHighlightButton" style="<%= toggle_action(:show_highlight_button) %>" class="toolbarButton" type="button" disabled="disabled" role="radio" aria-expanded="false" aria-haspopup="true" aria-controls="editorHighlightParamsToolbar" tabindex="0" data-l10n-id="pdfjs-editor-highlight-button">
                       <span data-l10n-id="pdfjs-editor-highlight-button-label"></span>
                     </button>
                     <div class="editorParamsToolbar hidden doorHangerRight" id="editorHighlightParamsToolbar">
@@ -224,7 +227,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                     </div>
                   </div>
                   <div id="editorFreeText" class="toolbarButtonWithContainer">
-                    <button id="editorFreeTextButton" style="<%= toggle_action(:text_button) %>" class="toolbarButton" type="button" disabled="disabled" role="radio" aria-expanded="false" aria-haspopup="true" aria-controls="editorFreeTextParamsToolbar" tabindex="0" data-l10n-id="pdfjs-editor-free-text-button">
+                    <button id="editorFreeTextButton" style="<%= toggle_action(:show_text_button) %>" class="toolbarButton" type="button" disabled="disabled" role="radio" aria-expanded="false" aria-haspopup="true" aria-controls="editorFreeTextParamsToolbar" tabindex="0" data-l10n-id="pdfjs-editor-free-text-button">
                       <span data-l10n-id="pdfjs-editor-free-text-button-label"></span>
                     </button>
                     <div class="editorParamsToolbar hidden doorHangerRight" id="editorFreeTextParamsToolbar">
@@ -241,7 +244,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                     </div>
                   </div>
                   <div id="editorInk" class="toolbarButtonWithContainer">
-                    <button id="editorInkButton" style="<%= toggle_action(:draw_button) %>" class="toolbarButton" type="button" disabled="disabled" role="radio" aria-expanded="false" aria-haspopup="true" aria-controls="editorInkParamsToolbar" tabindex="0" data-l10n-id="pdfjs-editor-ink-button">
+                    <button id="editorInkButton" style="<%= toggle_action(:show_draw_button) %>" class="toolbarButton" type="button" disabled="disabled" role="radio" aria-expanded="false" aria-haspopup="true" aria-controls="editorInkParamsToolbar" tabindex="0" data-l10n-id="pdfjs-editor-ink-button">
                       <span data-l10n-id="pdfjs-editor-ink-button-label"></span>
                     </button>
                     <div class="editorParamsToolbar hidden doorHangerRight" id="editorInkParamsToolbar">
@@ -262,7 +265,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                     </div>
                   </div>
                   <div id="editorStamp" class="toolbarButtonWithContainer">
-                    <button id="editorStampButton" style="<%= toggle_action(:add_edit_image_button) %>" class="toolbarButton" type="button" disabled="disabled" role="radio" aria-expanded="false" aria-haspopup="true" aria-controls="editorStampParamsToolbar" tabindex="0" data-l10n-id="pdfjs-editor-stamp-button">
+                    <button id="editorStampButton" style="<%= toggle_action(:show_add_edit_image_button) %>" class="toolbarButton" type="button" disabled="disabled" role="radio" aria-expanded="false" aria-haspopup="true" aria-controls="editorStampParamsToolbar" tabindex="0" data-l10n-id="pdfjs-editor-stamp-button">
                       <span data-l10n-id="pdfjs-editor-stamp-button-label"></span>
                     </button>
                     <div class="editorParamsToolbar hidden doorHangerRight menu" id="editorStampParamsToolbar">
@@ -278,10 +281,10 @@ See https://github.com/adobe-type-tools/cmap-resources
                 <div id="editorModeSeparator" class="verticalToolbarSeparator"></div>
 
                 <div class="toolbarHorizontalGroup hiddenMediumView">
-                  <button id="printButton" style="<%= toggle_action(:print_button) %>" class="toolbarButton" type="button" tabindex="0" data-l10n-id="pdfjs-print-button">
+                  <button id="printButton" style="<%= toggle_action(:show_print_button) %>" class="toolbarButton" type="button" tabindex="0" data-l10n-id="pdfjs-print-button">
                     <span data-l10n-id="pdfjs-print-button-label"></span>
                   </button>
-                  <button id="downloadButton" style="<%= toggle_action(:save_button) %>" class="toolbarButton" type="button" tabindex="0" data-l10n-id="pdfjs-save-button">
+                  <button id="downloadButton" style="<%= toggle_action(:show_save_button) %>" class="toolbarButton" type="button" tabindex="0" data-l10n-id="pdfjs-save-button">
                     <span data-l10n-id="pdfjs-save-button-label"></span>
                   </button>
                 </div>
@@ -294,7 +297,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                   </button>
                   <div id="secondaryToolbar" class="hidden doorHangerRight menu">
                     <div id="secondaryToolbarButtonContainer" class="menuContainer">
-                      <button id="secondaryOpenFile" style="<%= toggle_action(:open_file_button) %>" class="toolbarButton labeled" type="button" tabindex="0" data-l10n-id="pdfjs-open-file-button">
+                      <button id="secondaryOpenFile" style="<%= toggle_action(:show_open_file_button) %>" class="toolbarButton labeled" type="button" tabindex="0" data-l10n-id="pdfjs-open-file-button">
                         <span data-l10n-id="pdfjs-open-file-button-label"></span>
                       </button>
 
@@ -309,7 +312,7 @@ See https://github.com/adobe-type-tools/cmap-resources
 
                       </div>
 
-                      <div class="horizontalToolbarSeparator" style="<%= toggle_action(:open_file_button) %>"></div>
+                      <div class="horizontalToolbarSeparator" style="<%= toggle_action(:show_open_file_button) %>"></div>
 
                       <button id="presentationMode" class="toolbarButton labeled" type="button" tabindex="0" data-l10n-id="pdfjs-presentation-mode-button">
                         <span data-l10n-id="pdfjs-presentation-mode-button-label"></span>
