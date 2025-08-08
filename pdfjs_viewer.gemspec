@@ -18,7 +18,7 @@ Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = 'http://rubygems.org'
+    spec.metadata['allowed_push_host'] = 'https://rubygems.org'
     spec.metadata['homepage_uri'] = spec.homepage
     spec.metadata['source_code_uri'] = 'https://github.com/primeroIMS/pdfjs-viewer'
     spec.metadata['changelog_uri'] = 'https://github.com/primeroIMS/pdfjs-viewer/blob/main/CHANGELOG.md'
