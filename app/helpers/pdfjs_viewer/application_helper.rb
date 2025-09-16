@@ -7,7 +7,7 @@ module PdfjsViewer::ApplicationHelper
   def toggle_action(key = nil)
     return if PdfjsViewer.configuration.send(key)
 
-    'display: none'
+    'hide'
   end
 
   def stylesheet_path
